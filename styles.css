@@ -1,0 +1,245 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* General Styles */
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  line-height: 1.8;
+  background: #fdf7f4;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+body.dark-mode {
+  background: #001524; /* Dark mode background */
+  color: #d6cc99; /* Dark mode text color */
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #8eb486, #a6c4a2);
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+body.dark-mode header {
+  background: linear-gradient(135deg, #445d48, #d6cc99); /* Dark mode header */
+  color: #001524;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+header h2 {
+  font-size: 1.5em;
+  font-weight: 300;
+  color: #fdf7f4;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  margin-bottom: 20px;
+}
+
+/* Dark Mode Button */
+#darkModeToggle {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: #001524;
+  color: #d6cc99;
+  border: 2px solid #d6cc99;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s, color 0.3s;
+}
+
+#darkModeToggle:hover {
+  background: #d6cc99;
+  color: #001524;
+  transform: scale(1.1); /* Slightly enlarges the button on hover */
+}
+
+/* Sections */
+section {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.dark-mode section {
+  background: #445d48; /* Dark mode section background */
+}
+
+section:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings */
+h2 {
+  color: #8eb486;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #8eb486;
+  display: inline-block;
+}
+
+body.dark-mode h2 {
+  color: #d6cc99;
+  border-bottom: 2px solid #d6cc99;
+}
+
+h3 {
+  font-size: 1.3em;
+  color: #685752;
+  margin-bottom: 10px;
+}
+
+body.dark-mode h3 {
+  color: #fde5d4;
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* Lists */
+ul,
+ol {
+  padding-left: 20px;
+  margin: 15px 0;
+}
+
+li {
+  margin: 10px 0;
+}
+
+/* Image */
+img {
+  display: block;
+  margin: 20px auto;
+  max-width: 200px;
+  border-radius: 50%; /* Ensures the image stays circular */
+  border: 4px solid #8eb486; /* Light mode border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode img {
+  border: 4px solid #d6cc99; /* Adjust image border for dark mode */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Links */
+a {
+  color: #8eb486;
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+body.dark-mode a {
+  color: #fde5d4;
+}
+
+a:hover {
+  color: #6d9b6e;
+}
+
+body.dark-mode a:hover {
+  color: #d6cc99;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #8eb486;
+  color: white;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode footer {
+  background: #001524; /* Dark mode footer background */
+  color: #d6cc99; /* Footer text color in dark mode */
+}
+/* Section Fade-In Animation */
+section {
+  opacity: 0; /* Initially invisible */
+  transform: translateY(20px); /* Start with a slight downward offset */
+  animation: fadeIn 1s forwards ease-in-out;
+}
+
+/* Staggered Fade-In Effect for Sections */
+section:nth-child(2) {
+  animation-delay: 0.2s; /* 0.2s delay for the second section */
+}
+
+section:nth-child(3) {
+  animation-delay: 0.4s; /* 0.4s delay for the third section */
+}
+
+section:nth-child(4) {
+  animation-delay: 0.6s; /* 0.6s delay for the fourth section */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Initial position */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Final position */
+  }
+}
+/* Header */
+header {
+  body.dark-mode header {
+    background: linear-gradient(
+      135deg,
+      #2e3b2e,
+      #445d48
+    ); /* Updated dark mode gradient */
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite; /* Reuse the same animation */
+    color: #d6cc99;
+  }
+  animation: gradientShift 8s ease infinite; /* Apply animation */
+}
+
+body.dark-mode header {
+  background: linear-gradient(
+    135deg,
+    #445d48,
+    #b2c9ad
+  ); /* Dark mode gradient */
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite; /* Reuse the same animation */
+  color: #001524;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%; /* Start position */
+  }
+  50% {
+    background-position: 100% 50%; /* Midway position */
+  }
+  100% {
+    background-position: 0% 50%; /* Loop back to start */
+  }
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Mode Toggle</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Mohamed Asran's Bio Page!</h1>
+      <h2>A Glimpse into My World</h2>
+      <button
+        id="darkModeToggle"
+        onclick="toggleTheme()"
+        aria-label="Toggle Dark Mode"
+      >
+        🌙 Dark Mode
+      </button>
+    </header>
+
+    <main>
+      <article>
+        <section>
+          <hr />
+          <img
+            src="https://engineering.nyu.edu/sites/default/files/styles/square_large_1024_2x/public/2025-01/IMG_5918_0.jpg?h=854738ac&itok=dpVUpbEQ"
+            alt="Mohamed Asran wearing a suit and smiling"
+          />
+          <p>
+            Hello! My name is Mohamed, and I’m passionate about higher
+            education, global program management, and creating impactful
+            opportunities for students. I graduated with my Master of Science in
+            Education in Higher Education Administration last May and currently
+            work at New York University as a Global Opportunities Administrator.
+            When I’m not working, I enjoy exploring new cultures, experimenting
+            with creative recipes, and delving into DIY projects.
+          </p>
+          <p>
+            You can connect with me on
+            <a
+              href="http://www.linkedin.com/in/mohamed-w-asran"
+              target="_blank"
+              aria-label="Visit Mohamed's LinkedIn profile"
+              >LinkedIn</a
+            >
+            to learn more about my journey and the projects I’m working on.
+          </p>
+        </section>
+
+        <section>
+          <h2>My Hobbies</h2>
+          <h3>Things I Enjoy</h3>
+          <ul>
+            <li>
+              <strong>Building LEGO sets and wooden puzzles:</strong> I love the
+              challenge and creativity these activities bring.
+            </li>
+            <li>
+              <strong>Exploring new coffee shops in NYC:</strong> There’s
+              nothing like finding a hidden gem with a great atmosphere and an
+              excellent latte.
+            </li>
+            <li>
+              <strong>Playing video games:</strong> It’s a fun way to unwind and
+              connect with friends.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>My Goals</h2>
+          <h3>What I Hope to Achieve</h3>
+          <ol>
+            <li>
+              <strong>Travel to at least 10 new countries</strong> in the next
+              five years to broaden my cultural understanding.
+            </li>
+            <li>
+              <strong>Train for a marathon</strong> or complete a challenging
+              fitness milestone.
+            </li>
+            <li>
+              <strong>Develop a strong work-life balance</strong> while building
+              my own business.
+            </li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>My Latest Reads</h2>
+          <h3>Books That Expand My Perspective</h3>
+          <ul>
+            <li>
+              <strong>
+                <a
+                  href="https://www.goodreads.com/book/show/13099738-steal-like-an-artist"
+                  target="_blank"
+                  aria-label="Visit Goodreads page for Steal Like an Artist"
+                >
+                  <em>"Steal Like an Artist"</em> by Austin Kleon
+                </a>
+              </strong>
+              : A refreshing perspective on creativity, encouraging me to
+              embrace inspiration from the world around me and make it my own.
+            </li>
+            <li>
+              <strong>
+                <a
+                  href="https://www.goodreads.com/book/show/27036528-ego-is-the-enemy"
+                  target="_blank"
+                  aria-label="Visit Goodreads page for Ego Is the Enemy"
+                >
+                  <em>"Ego Is the Enemy"</em> by Ryan Holiday
+                </a>
+              </strong>
+              : A thought-provoking book that challenges the role of ego in
+              success, teaching humility, discipline, and self-awareness.
+            </li>
+            <li>
+              <strong>
+                <a
+                  href="https://www.goodreads.com/book/show/33232697-simply-said"
+                  target="_blank"
+                  aria-label="Visit Goodreads page for Simply Said"
+                >
+                  <em>"Simply Said"</em> by Jay Sullivan
+                </a>
+              </strong>
+              : A practical guide that improved my communication skills,
+              teaching me how to convey ideas clearly and confidently.
+            </li>
+          </ul>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2025 Mohamed Asran. Built with ❤️ and a little help from GPT
+        (who’s not too bad at HTML).
+      </p>
+    </footer>
+
+    <script>
+      // Dark Mode Toggle
+      const toggleTheme = () => {
+        document.body.classList.toggle("dark-mode");
+        const button = document.getElementById("darkModeToggle");
+        button.textContent = document.body.classList.contains("dark-mode")
+          ? "☀️ Light Mode"
+          : "🌙 Dark Mode";
+      };
+    </script>
+  </body>
+</html>
